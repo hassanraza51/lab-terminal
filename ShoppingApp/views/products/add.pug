@@ -1,0 +1,35 @@
+extends ../layout
+
+block content
+    .row
+        .col-sm-3
+        .col-sm-6 
+            form(action="/products/add",method="post")
+                .form-group
+                    label(for="name") Product Name
+                    input#name(type="text", class="form-control", name="name" required)
+                .form-group
+                    label(for="price") Product Price
+                    input#price(type="text", class="form-control", name="price" required)
+                .form-group
+                    label(for="description") Product Description
+                    input#dedscription(type="text", class="form-control", name="description")
+                .form-group
+                    label(for="description") Product Rating
+                    <br/>
+                    .rate
+                        input#star5(type='radio' name='rate' value='5')
+                        label(for='star5' title='text') 5 stars
+                        input#star4(type='radio' name='rate' value='4')
+                        label(for='star4' title='text') 4 stars
+                        input#star3(type='radio' name='rate' value='3')
+                        label(for='star3' title='text') 3 stars
+                        input#star2(type='radio' name='rate' value='2')
+                        label(for='star2' title='text') 2 stars
+                        input#star1(type='radio' name='rate' value='1')
+                        label(for='star1' title='text') 1 star
+                    <br/>
+                    <br/>
+                    <br/>  
+                input(type="submit" class="btn btn-info")
+        .col-sm-3

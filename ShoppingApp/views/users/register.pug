@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+    .row
+        .col-sm-3
+        .col-sm-6 
+            h1 Signup
+            form(action="/register",method="post")
+                    .mb-3
+                        label(for="name") Username
+                        input#name(type="text", class="form-control", name="name" required)
+                    .mb-3
+                        label(for="email") Email
+                        input#email(type="text", class="form-control", name="email" required)
+                    .mb-3
+                        label(for="gender") gender
+                        input#gender(type="text", class="form-control", name="gender" required)
+                    .mb-3
+                        label(for="password") Password
+                        input#price(type="password", class="form-control", name="password" required)
+                    input(type="submit", class="btn btn-info" value="Register")
+            .col-sm-3

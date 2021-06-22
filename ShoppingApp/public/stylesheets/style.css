@@ -1,19 +1,60 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: skyblue;
 }
 h1 {
-  color: #00b7ff;
   text-align: center;
 }
+.checked {
+  color: orange;
+}
+
+#outer {
+  background-color: greenyellow;
+  padding: 1%;
+}
+
 a {
   color: #00b7ff;
 }
-.LoginPanel {
-  width: 300px;
-  border: 15px solid green;
-  padding: 50px;
-  margin: 20px;
-  margin-right: 40%;
+
+a:hover {
+  transform: scale(1.1);
+}
+
+.rate {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+}
+.rate:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+.rate:not(:checked) > label {
   float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
+}
+.rate:not(:checked) > label:before {
+  content: "★ ";
+}
+.rate > input:checked ~ label {
+  color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
 }

@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+    .row
+        .col-sm-3
+        .col-sm-6 
+            h1 Login
+            form(action="/login",method="post")        
+                    .mb-3
+                        label(for="email") Email
+                        input#email(type="text", class="form-control", name="email", required)
+                    .mb-3
+                        label(for="password") Password
+                        input#price(type="password", class="form-control", name="password",, required)
+                    input(type="submit", class="btn btn-info" value="Login")
+            .col-sm-3
